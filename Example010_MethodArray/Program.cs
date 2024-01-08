@@ -17,6 +17,7 @@
 // 4. Если index < n, то перейти к шагу 2. В противном случае
 // алгоритм завершил работу безуспешно.
 
+// если значения в массиве уникальные
 int[] array = { 1, 12, 31, 4, 15, 16, 17, 18 };
 
 int n = array.Length;
@@ -29,6 +30,25 @@ while (index < n)
     if (array[index] == find)
     {
         Console.WriteLine(index);
+    }
+    index++;
+    
+}
+
+// если значения в массиве повторяются
+int[] array = { 1, 12, 31, 18, 4, 15, 16, 17, 18 };
+
+int n = array.Length;
+int find = 18;
+
+int index = 0;
+
+while (index < n)
+{
+    if (array[index] == find)
+    {
+        Console.WriteLine(index);
+        break; // если условие выполняется, завершает работу, показывает первый элемент с заданным числом
     }
     index++;
     
